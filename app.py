@@ -13,7 +13,7 @@ CORS(app)
 # ================= CONFIG (Matches your train.py) =================
 FRAMES = 30
 FEATURES = 126
-MODEL_PATH = 'models/sign_transformer.h5'
+MODEL_PATH = 'sign_transformer.h5'
 
 # Load Model
 try:
@@ -137,4 +137,5 @@ def predict_frame():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
+
     app.run(host='0.0.0.0', port=port)
