@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+tensorflow-cpu       # Uses WAY less RAM and builds faster than standard TF
+mediapipe==0.10.5    # The stable version we found works for your code
+opencv-python-headless # CRITICAL: Standard opencv will crash on Render
+gunicorn             # The production server Render needs to run Flask
