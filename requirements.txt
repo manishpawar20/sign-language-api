@@ -1,6 +1,6 @@
 flask
 flask-cors
-tensorflow-cpu
+tflite-runtime
 mediapipe==0.10.5
 opencv-python-headless
 gunicorn
