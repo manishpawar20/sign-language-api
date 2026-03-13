@@ -34,7 +34,12 @@ except Exception as e:
 
 # Setup MediaPipe
 mp_hands = mp.solutions.hands
-hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.6)
+hands = mp_hands.Hands(
+    static_image_mode=False, 
+    max_num_hands=1, # Reduce to 1 hand to save 50% processing power
+    min_detection_confidence=0.5,
+    min_tracking_confidence=0.5
+)
 sequence_buffer = []
 
 def extract_hand_landmarks(results):
